@@ -6,6 +6,7 @@ import Footer from "./Footer";
 const Root = () => {
     return (
         <div>
+            <h2>hekllo</h2>
             <Navbar></Navbar>
             <Outlet></Outlet>
             <Footer></Footer>
