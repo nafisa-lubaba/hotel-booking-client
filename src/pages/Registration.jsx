@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../authProvider/AuthProvider";
 import { ToastContainer, toast } from 'react-toastify';
-import { FaEyeSlash } from "react-icons/fa";
+import { FaEyeSlash, FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import 'react-toastify/dist/ReactToastify.css';
 import Swal from "sweetalert2";
 import { useForm } from "react-hook-form";
@@ -116,12 +116,12 @@ const Registration = () => {
                             {...register("password", { required: true })} />
                         {/* Show/hide password toggle */}
                         <button type="button" className="absolute inset-y-0 right-0 px-3 flex items-center" onClick={togglePasswordVisibility}>
-                            {showPassword ? (
-                                <FaEyeSlash className="w-6 h-6" />
-                            ) : (
-                                <FaEyeSlash className="w-6 h-6" />
-                            )}
-                        </button>
+                                    {showPassword ? (
+                                        <FaRegEye className="w-6 h-6" />
+                                    ) : (
+                                        <FaRegEyeSlash className="w-6 h-6" />
+                                    )}
+                                </button>
                     </div>
                     {errors.password && <span className="text-red-600">{errors.password.message}</span>}
                     <div className="flex justify-end text-xs dark:text-gray-600">
