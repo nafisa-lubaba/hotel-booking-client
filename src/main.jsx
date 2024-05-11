@@ -14,6 +14,7 @@ import SignIn from './pages/SignIn';
 import Rooms from './pages/Rooms';
 import MyBooking from './pages/MyBooking';
 import ContactUs from './pages/ContactUs';
+import RoomInfo from './pages/RoomInfo';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -23,8 +24,17 @@ const router = createBrowserRouter([
       {
         path: '/',
         element:<Home></Home> ,
-         loader: ()=> fetch('data.json'),
+        
        
+      },
+      {
+        path: '/rooms/:id',
+        loader: ({params}) => fetch((`${import.meta.env.VITE_API_URL}/rooms/${params.id}`)),
+      
+        element: <RoomInfo></RoomInfo>
+          
+       
+
       },
       {
         path: '/signup',

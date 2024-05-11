@@ -1,6 +1,5 @@
 [
     {
-        "room_id": 1,
         "category": "Standard",
         "title": "Cozy Single Room",
         "room_description": "Perfect for solo travelers, our cozy single room offers a comfortable bed and essential amenities.",
@@ -15,7 +14,6 @@
         "special_offers": "10% off for bookings of 3 nights or more."
     },
     {
-        "room_id": 2,
         "category": "Standard",
         "title": "Comfort Double Room",
         "room_description": "Our comfort double room is ideal for couples, featuring a spacious bed and modern amenities.",
@@ -30,7 +28,6 @@
         "special_offers": "Complimentary breakfast included."
     },
     {
-        "room_id": 3,
         "category": "Deluxe",
         "title": "Executive Suite",
         "room_description": "Experience luxury in our executive suite, featuring a separate living area and stunning views.",
@@ -45,7 +42,6 @@
         "special_offers": "Late checkout until 2:00 PM."
     },
     {
-        "room_id": 4,
         "category": "Suite",
         "title": "Presidential Suite",
         "room_description": "Indulge in luxury with our presidential suite, offering unmatched comfort and opulence.",
@@ -60,7 +56,6 @@
         "special_offers": "Complimentary limousine airport transfer."
     },
     {
-        "room_id": 5,
         "category": "Standard",
         "title": "Family Room",
         "room_description": "Ideal for families, our spacious family room offers comfortable bedding and ample space.",
@@ -75,7 +70,6 @@
         "special_offers": "50% off for children under 12."
     },
     {
-        "room_id": 6,
         "category": "Deluxe",
         "title": "Luxury Loft",
         "room_description": "Experience urban chic in our luxury loft, featuring stylish decor and panoramic city views.",
@@ -90,7 +84,6 @@
         "special_offers": "Complimentary bottle of champagne upon arrival."
     },
     {
-        "room_id": 7,
         "category": "Standard",
         "title": "Economy Room",
         "room_description": "Budget-friendly and comfortable, our economy room is perfect for the value-conscious traveler.",
@@ -105,7 +98,6 @@
         "special_offers": "Stay 3 nights, pay for 2."
     },
     {
-        "room_id": 8,
         "category": "Suite",
         "title": "Honeymoon Suite",
         "room_description": "Celebrate love in our romantic honeymoon suite, featuring a cozy fireplace and private balcony.",
