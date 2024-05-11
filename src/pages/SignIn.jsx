@@ -109,7 +109,7 @@ const SignIn = () => {
                             <div className="relative">
                                 <input
                                     type={showPassword ? "text" : "password"}
-                                    name="userpassword"  
+                                    name="userpassword"
                                     id="password"
                                     placeholder="Password"
                                     className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
@@ -117,12 +117,12 @@ const SignIn = () => {
                                 />
                                 {/* Show/hide password toggle */}
                                 <button type="button" className="absolute inset-y-0 right-0 px-3 flex items-center" onClick={togglePasswordVisibility}>
-    {showPassword ? (
-        <FaRegEye className="w-6 h-6" />  
-    ) : (
-        <FaRegEyeSlash className="w-6 h-6" />  
-    )}
-</button>
+                                    {showPassword ? (
+                                        <FaRegEye className="w-6 h-6" />
+                                    ) : (
+                                        <FaRegEyeSlash className="w-6 h-6" />
+                                    )}
+                                </button>
 
                             </div>
                             {errors.password && <span className="text-red-600">{errors.password.message}</span>}

@@ -11,6 +11,9 @@ import AuthProvider from './authProvider/AuthProvider';
 import Home from './pages/Home';
 import Registration from './pages/Registration';
 import SignIn from './pages/SignIn';
+import Rooms from './pages/Rooms';
+import MyBooking from './pages/MyBooking';
+import ContactUs from './pages/ContactUs';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -30,6 +33,21 @@ const router = createBrowserRouter([
       {
         path: '/signin',
         element:<SignIn></SignIn>,
+       
+      },
+      {
+        path: '/rooms',
+        element:<Rooms></Rooms>,
+       
+      },
+      {
+        path: '/my-booking',
+        element:<MyBooking></MyBooking>,
+       
+      },
+      {
+        path: '/contact-us',
+        element:<ContactUs></ContactUs>,
        
       },
     ]

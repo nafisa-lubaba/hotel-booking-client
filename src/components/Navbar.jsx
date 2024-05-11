@@ -1,10 +1,11 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { IoIosHome } from "react-icons/io";
-import { MdPlace } from "react-icons/md";
+import { BiSolidHomeHeart } from "react-icons/bi";
 import { IoMdAddCircle } from "react-icons/io";
 import { MdPlaylistAddCircle } from "react-icons/md";
 import { AuthContext } from "../authProvider/AuthProvider";
+import { MdBedroomParent } from "react-icons/md";
+import logo from '../assets/icons8-booking-48.png'
 
 
 const Navbar = () => {
@@ -13,24 +14,25 @@ const Navbar = () => {
         user ? (<>
 
             <div className="flex gap-2">
-                <button className="text-2xl text-[#682018]"><IoIosHome /></button>
+                <button className="text-2xl text-[#682018]"><BiSolidHomeHeart /></button>
 
 
                 <NavLink to='/' className={({ isActive }) => isActive ? 'border bg-[#411b18] text-white  text-xl font-bold' : 'font-bold text-xl px-2'}>Home</NavLink>
             </div>
             <div className="flex gap-2">
-                <button className="text-2xl text-[#682018]"><MdPlace /></button>
+                <button className="text-2xl text-[#682018]"><MdBedroomParent /></button>
 
-                <NavLink to='/touristsSpot' className={({ isActive }) => isActive ? 'border bg-[#411b18] text-white px-3 text-xl font-bold' : 'font-bold text-xl'}>All Tourists Spot</NavLink>
+                <NavLink to='/rooms' className={({ isActive }) => isActive ? 'border bg-[#411b18] text-white px-3 text-xl font-bold' : 'font-bold text-xl'}>Rooms</NavLink>
             </div>
             <div className="flex gap-2">
-                <button className="text-2xl text-[#682018]"><IoMdAddCircle /></button>
-                <NavLink to='/addSpot' className={({ isActive }) => isActive ? 'border bg-[#411b18] text-white px-3 text-xl font-bold' : 'font-bold text-xl'}>Add Spot</NavLink>
+              
+                <img  className="w-6 text-2xl ml-2" src={logo} alt="" />
+                <NavLink to='/my-booking' className={({ isActive }) => isActive ? 'border bg-[#411b18] text-white px-3 text-xl font-bold' : 'font-bold text-xl'}>My Bookings</NavLink>
             </div>
 
             <div className="flex gap-2 ">
                 <button className="text-2xl text-[#682018]"><MdPlaylistAddCircle /></button>
-                <NavLink to='/myList' className={({ isActive }) => isActive ? 'border bg-[#411b18] text-white  px-3 text-xl font-bold' : 'font-bold text-xl'}>my List</NavLink>
+                <NavLink to='/contact-us' className={({ isActive }) => isActive ? 'border bg-[#411b18] text-white  px-3 text-xl font-bold' : 'font-bold text-xl'}>Contact Us</NavLink>
 
             </div>
         </>) :
@@ -38,7 +40,7 @@ const Navbar = () => {
 
             <div className="lg:flex gap-5">
                 <NavLink to='/' className="flex items-center space-x-2" activeClassName="border bg-[#411b18] text-white px-3 text-xl font-bold">
-                    <button className="text-2xl text-[#682018]"><IoIosHome /></button>
+                    <button className="text-2xl text-[#682018]"><BiSolidHomeHeart /></button>
                     <span className="font-bold text-xl">Home</span>
                 </NavLink>
                 <Link to='/signin'>
