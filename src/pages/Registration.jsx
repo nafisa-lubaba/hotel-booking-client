@@ -6,13 +6,14 @@ import { FaEyeSlash, FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import 'react-toastify/dist/ReactToastify.css';
 import Swal from "sweetalert2";
 import { useForm } from "react-hook-form";
-import SocialLogin from "../components/SocialLogin";
+import axios from "axios";
+
 
 
 
 const Registration = () => {
     const { createUser } = useContext(AuthContext)
-	const Navigate = useNavigate()
+	const navigate = useNavigate()
 	const location = useLocation()
 	const from = location?.state || '/'
 	const [showPassword, setShowPassword] = useState(false);
@@ -22,7 +23,7 @@ const Registration = () => {
 		handleSubmit,
 		formState: { errors },
 	} = useForm()
-	const onSubmit = (data) => {
+	const onSubmit = async (data) => {
 		const { email, password } = data
 		if (password.length < 6) {
 			toast('Password should be 6 character or more')
@@ -35,29 +36,60 @@ const Registration = () => {
 			toast('Password should have at lease one Lowercase letter')
 			return;
 		}
-		createUser(email, password)
-			.then(result => {
-				Swal.fire({
-					icon: 'success',
-					title: 'Registration successful',
-					showConfirmButton: false,
-					timer: 1500,
-				});
-				if (result.user) {
-					Navigate(from)
-				}
-			})
-			.catch(error => {
-				Swal.fire({
-					icon: "error",
-					title: "Oops... Registration Failed",
-					text: "Something went wrong!",
-					footer: '<a href="#">Why do I have this issue?</a>'
-				});
+    // try {
+    //  const result = createUser(email, password)
+		// 	.then(result => {
+		// 		Swal.fire({
+		// 			icon: 'success',
+		// 			title: 'Registration successful',
+		// 			showConfirmButton: false,
+		// 			timer: 1500,
+		// 		});
+		// 		if (result.user) {
+		// 			Navigate(from)
+		// 		}
+		// 	})
+		// 	.catch(error => {
+		// 		Swal.fire({
+		// 			icon: "error",
+		// 			title: "Oops... Registration Failed",
+		// 			text: "Something went wrong!",
+		// 			footer: '<a href="#">Why do I have this issue?</a>'
+		// 		});
 
 
-			})
-		}
+		// 	})
+		// }
+    try {
+      const result = await createUser(email, password);
+      console.log(result.user);
+      const { data } = await axios.post(
+          `${import.meta.env.VITE_API_URL}/jwt`,
+          {
+              email: result?.user?.email,
+          },
+          { withCredentials: true }
+      );
+      console.log(data);
+      Swal.fire({
+          icon: 'success',
+          title: 'Registration successful',
+          showConfirmButton: false,
+          timer: 1500,
+      });
+      navigate(from, { replace: true });
+  } catch (error) {
+      Swal.fire({
+          icon: "error",
+          title: "Oops... Registration Failed",
+          text: "Something went wrong!",
+          footer: '<a href="#">Why do I have this issue?</a>'
+      });
+      console.error("An error occurred:", error);
+  }
+  
+     }
+		
 	
 	const togglePasswordVisibility = () => {
 			setShowPassword(!showPassword);
@@ -77,7 +109,7 @@ const Registration = () => {
           <p className='mt-3 text-xl text-center text-gray-600 '>
             Get Your Free Account Now.
           </p>
-          <SocialLogin></SocialLogin>
+          
 
          
 
