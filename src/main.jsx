@@ -27,15 +27,7 @@ const router = createBrowserRouter([
         
        
       },
-      {
-        path: '/rooms/:id',
-        loader: ({params}) => fetch((`${import.meta.env.VITE_API_URL}/rooms/${params.id}`)),
       
-        element: <RoomInfo></RoomInfo>
-          
-       
-
-      },
       {
         path: '/signup',
         element:<Registration></Registration>,
@@ -50,6 +42,14 @@ const router = createBrowserRouter([
         path: '/rooms',
         element:<Rooms></Rooms>,
        
+      },
+      {
+        path: '/rooms/:id',
+        element: <RoomInfo></RoomInfo>,
+        loader:({ params }) => fetch(`${import.meta.env.VITE_API_URL}/rooms/${params.id}`)
+          
+       
+
       },
       {
         path: '/my-booking',

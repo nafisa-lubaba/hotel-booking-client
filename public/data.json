@@ -9,7 +9,7 @@
         "beds": 1,
         "availability": "Available",
         "room_images": ["https://i.ibb.co/0jMDj2m/image-1-a.jpg", "image2.jpg", "image3.jpg"],
-        "banner_image": "banner1.jpg",
+        "banner_image": "https://i.ibb.co/0jMDj2m/image-1-a.jpg",
         "features_paragraph": "Includes free Wi-Fi, TV, and ensuite bathroom.",
         "special_offers": "10% off for bookings of 3 nights or more."
     },
@@ -36,7 +36,7 @@
         "max_guests": 2,
         "beds": 1,
         "availability": "Available",
-        "room_images": ["https://i.ibb.co/LkS6qsP/delux-exclusive-2.jpg", "https://i.ibb.co/ZSfdvRN/dulkex-exclusive.jpg", "https://i.ibb.co/KrgpLj1/delux-exclusive-3.jpg"],
+        "room_images": ["https://i.ibb.co/KrgpLj1/delux-exclusive-3.jpg", "https://i.ibb.co/ZSfdvRN/dulkex-exclusive.jpg", "https://i.ibb.co/LkS6qsP/delux-exclusive-2.jpg"],
         "banner_image": "banner3.jpg",
         "features_paragraph": "Spa bath, complimentary minibar, and access to exclusive lounge.",
         "special_offers": "Late checkout until 2:00 PM."
