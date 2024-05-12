@@ -3,6 +3,7 @@ import { createContext, useEffect, useState } from "react";
 import auth from "../firebase/firebase.config";
 import Swal from "sweetalert2";
 import { toast } from "react-toastify";
+import axios from "axios";
 
 export const AuthContext = createContext(null)
 const googleProvider = new GoogleAuthProvider();
@@ -56,12 +57,22 @@ const AuthProvider = ({children}) => {
         setLoading(true)
         return signInWithPopup(auth, githubProvider)
     }
-    const logOut =()=>{
+    const logOut = async()=>{
         setUser (null)
         
-        setLoading(false)
+        setLoading(true)
+        const { data } = await axios(`${import.meta.env.VITE_API_URL}/logout`, {
+          withCredentials: true,
+        })
+        console.log(data)
         signOut(auth)
-        toast.success("Logout successful!");
+        console.log(data);
+        Swal.fire({
+            icon: 'success',
+            title: 'logout successfully',
+            showConfirmButton: false,
+            timer: 1500,
+        });
         
     }
     useEffect(()=>{
