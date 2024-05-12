@@ -27,11 +27,13 @@ const MyBooking = () => {
                             <th>category</th>
                             <th>title</th>
                         
-                            <th>average_cost</th>
-                            <th>travel_time</th>
-                            <th>seasonality</th>
+                            <th>price_per_night</th>
+                            <th>max_guests</th>
+                            <th>beds</th>
+                            <th>Booking date</th>
                             <th>Update</th>
                             <th>Delete</th>
+                            <th>Review</th>
                         </tr>
                     </thead>
                     <tbody className="text-[#682018]">
@@ -43,11 +45,13 @@ const MyBooking = () => {
                                 <td>{list.category}</td>
                                 <td>{list.title}</td>
 
-                                <td>{list.tourist_spot_name}</td>
+                                <td>${list.price_per_night}</td>
 
-                                <td>{list.average_cost}</td>
-                                <td>{list.travel_time}</td>
-                                <td>{list.seasonality}</td>
+                                <td>{list.max_guests}</td>
+                                <td>{list.beds}</td>
+                                
+                                <td>{list.bookingFrom}
+                                <br />{list.bookingTo}</td>
 
 
 
@@ -61,6 +65,8 @@ const MyBooking = () => {
 
                                     <td><button className="btn btn-outline border border-[##682018] hover:bg-[#682018] hover:outline-none hover:text-white text-[#682018]">
                                     Delete</button></td>
+                                    <td><button className="btn btn-outline border border-[##682018] hover:bg-[#682018] hover:outline-none hover:text-white text-[#682018]">
+                                    Review</button></td>
                             </tr>)
 
 
