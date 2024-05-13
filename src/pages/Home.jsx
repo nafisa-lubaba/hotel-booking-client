@@ -9,7 +9,7 @@ import Reviews from '../components/Reviews';
 
 const Home = () => {
     return (
-        <div>
+        <div className=' container mx-auto w-[90%] '>
 
           
             <Slider></Slider>

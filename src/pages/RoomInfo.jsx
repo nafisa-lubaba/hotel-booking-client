@@ -3,6 +3,7 @@ import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../authProvider/AuthProvider";
 import Swal from "sweetalert2";
 import axios from "axios";
+import { RiMoneyDollarCircleLine } from "react-icons/ri";
 
 const RoomInfo = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -53,26 +54,28 @@ const RoomInfo = () => {
 
     return (
 
-        <div className='bg-white flex flex-col md:flex-row justify-around gap-5  items-center min-h-[calc(100vh-306px)] md:max-w-screen-xl mx-auto'>
+        <div className=' text-[#158260] flex flex-col md:flex-row justify-around gap-5  items-center min-h-[calc(100vh-306px)] md:max-w-screen-xl mx-auto'>
             <div className="max-w-2xl overflow-hidden rounded-lg shadow-md dark:bg-gray-800">
                 <img className="object-cover w-full h-64" src={banner_image} alt="Room" />
 
                 <div className="p-6">
                     <div>
-                        <a href="#" className="block mt-2 text-xl font-semibold text-[#2ccb99] duration-300 transform dark:text-white hover:text-gray-600 hover:underline" tabIndex="0" role="link">{title}</a>
+                        <a href="#" className="block mt-2 text-xl font-semibold text-[#158260] duration-300 transform dark:text-white hover:text-gray-600 hover:underline" tabIndex="0" role="link">{title}</a>
 
                         {/* <a href="#" className="block mt-2 text-xl font-semibold text-gray-800 transition-colors duration-300 transform dark:text-white hover:text-gray-600 hover:underline" tabIndex="0" role="link">{room_description}</a> */}
-                        <p className="mt-2 text-sm text-gray-600 dark:text-gray-400"><span className="text-[#2ccb99] font-bold">Description of the Room:</span>
-                            {room_description}</p>
+                        <p className="mt-2 text-xl dark:text-gray-400"><span className="text-[#158260] font-bold">Description of the Room:</span>
+                        <span className="text-[#2ccb99] pl-2 text-xl">{room_description}</span>
+                            </p>
                     </div>
 
                     <div className="mt-4">
                         <div className="flex justify-between">
                             <div className="flex items-center">
-                                <h2 className="border font-bold text-[#2ccb99]">Price: ${price_per_night}</h2>
+                                <button className="text-xl mr-2"><RiMoneyDollarCircleLine /></button>
+                                <h2 className=" text-xl font-bold text-[#2ccb99]">Price: <span className="text-[#158260] pl-2">${price_per_night}</span></h2>
 
-                                <a href="#" className="mx-2 font-semibold text-[#2ccb99]" tabIndex="0" role="link">Room Size: {room_size}</a>
-                                <a href="#" className="mx-2  text-gray-700 dark:text-gray-200" tabIndex="0" role="link"> Availability: <span className="font-bold text-[#2ccb99]">  {availability}</span>
+                                <a href="#" className="mx-2 ml-3 font-semibold text-xl text-[#2ccb99]" tabIndex="0" role="link">Room Size: <span className="text-[#158260] pl-2">{room_size}</span></a>
+                                <a href="#" className="mx-2 text-xl font-semi  text-[#2ccb99] dark:text-gray-200" tabIndex="0" role="link"> Availability: <span className="font-bold text-[#158260] pl-2">  {availability}</span>
                                 </a>
                             </div>
 
@@ -80,7 +83,7 @@ const RoomInfo = () => {
 
                     </div>
                 </div>
-                <a href="#" className="mx-2  text-gray-700 dark:text-gray-200" tabIndex="0" role="link"> special_offers: <span className="font-bold text-[#2ccb99]">  {special_offers}</span>
+                <a href="#" className=" pl-5 font-semibold lg:text-xl   text-[#2ccb99]  dark:text-gray-200" tabIndex="0" role="link"> special_offers: <span className="font-bold pl-2 text-[#158260]">  {special_offers}</span>
                 </a>
 
                 <section className="py-6 dark:bg-gray-100">
@@ -110,7 +113,7 @@ const RoomInfo = () => {
                                 return;
                             }
                             setIsOpen(true);
-                        }} className="w-full bg-[#2ccb99] text-white px-6 py-2 mx-auto tracking-wide capitalize transition-colors duration-300 transform  rounded-md hover:bg-white hover:text-black">
+                        }} className="w-full bg-[#158260] text-white px-6 py-2 mx-auto tracking-wide capitalize transition-colors duration-300 transform  rounded-md hover:bg-white hover:text-black">
                             Confirm Booking
                         </button>
                     </div>
@@ -168,15 +171,15 @@ const RoomInfo = () => {
                                     </div>
 
                                     <div className="mt-5 sm:flex sm:items-center sm:justify-between">
-                                        <a href="#" className="text-sm text-blue-500 hover:underline">Learn more</a>
+                                       
 
                                         <div className="sm:flex sm:items-center ">
-                                            <button onClick={handleBookNowClick}className="w-full px-4 py-2 mt-2 text-sm font-medium bg-[#2ccb99] tracking-wide text-white capitalize transition-colors duration-300 transform border border-gray-200 rounded-md sm:mt-0 sm:w-auto sm:mx-2 dark:text-gray-200 dark:border-gray-700 dark:hover:bg-gray-800 hover:bg-gray-100 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-40">
+                                            <button onClick={handleBookNowClick}className="w-full px-4 py-2 mt-2 text-sm font-medium bg-[#158260] tracking-wide text-white capitalize transition-colors duration-300 transform border border-gray-200 rounded-md sm:mt-0 sm:w-auto sm:mx-2 dark:text-gray-200 dark:border-gray-700 dark:hover:bg-gray-800 hover:bg-gray-100 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-40">
                                                 Book Now
                                                 
                                             </button>
                                             
-                                            <button onClick={() => setIsOpen(false)} className="w-full px-4 py-2 mt-2 text-sm font-medium bg-[#2ccb99] tracking-wide text-white capitalize transition-colors duration-300 transform border border-gray-200 rounded-md sm:mt-0 sm:w-auto sm:mx-2 dark:text-gray-200 dark:border-gray-700 dark:hover:bg-gray-800 hover:bg-gray-100 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-40">
+                                            <button onClick={() => setIsOpen(false)} className="w-full px-4 py-2 mt-2 text-sm font-medium bg-[#158260] tracking-wide text-white capitalize transition-colors duration-300 transform border border-gray-200 rounded-md sm:mt-0 sm:w-auto sm:mx-2 dark:text-gray-200 dark:border-gray-700 dark:hover:bg-gray-800 hover:bg-gray-100 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-40">
                                                 Cancel
                                             </button>
 

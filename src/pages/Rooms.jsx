@@ -21,7 +21,7 @@ const Rooms = () => {
 
         {
           rooms.map(card => (
-            <Link  to={`/rooms/${card._id}`} key={card._id} className='card bg-[#434336] bg-opacity-20 backdrop-blur-base rounded-lg text-[#682018]' data-aos='fade-right'>
+            <Link  to={`/rooms/${card._id}`} key={card._id} className='card bg-[#767676] bg-opacity-20 backdrop-blur-base rounded-lg text-[#158260]' data-aos='fade-right'>
               <figure className=''>
 
                 <img className='rounded-xl px-5 pt-5' src={card.room_images} alt={`image for the tourist_spot_name
@@ -32,8 +32,8 @@ ${card.category}`} />
 
 
                 <div className='mb-3'>
-                  <p className=''>category:  <span className='font-semibold ml-3'> {card.category}</span></p>
-                  <p className=''>Description:  <span className='font-semibold ml-3'> {card.room_description}</span></p>
+                  <p className='font-semibold'>category:  <span className='font-bold ml-3'> {card.category}</span></p>
+                  <p className='font-semibold'>Description:  <span className='font-bold ml-3'> {card.room_description}</span></p>
                   {/* <p className=''>Description:  <span className='font-semibold ml-3'>  {cards.short_description}</span></p> */}
 
                   {/* <p className=''>Travel Time:  <span className='font-semibold ml-3'>{cards.travel_time}</span></p>
