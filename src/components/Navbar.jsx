@@ -1,8 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { BiSolidHomeHeart } from "react-icons/bi";
-import { IoMdAddCircle } from "react-icons/io";
-import { MdPlaylistAddCircle } from "react-icons/md";
+
 import { AuthContext } from "../authProvider/AuthProvider";
 import { MdBedroomParent } from "react-icons/md";
 import logo from '../assets/icons8-booking-48.png'

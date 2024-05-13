@@ -4,6 +4,7 @@ import Slider from '../components/Slider';
 import Cards from '../components/Cards';
 import Maps from '../components/Maps';
 import Newsletter from '../components/Newsletter';
+import Reviews from '../components/Reviews';
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
             <Cards></Cards>
             <Maps></Maps>
             <Newsletter></Newsletter>
+            <Reviews></Reviews>
               <ToastContainer/>
             
         </div>
