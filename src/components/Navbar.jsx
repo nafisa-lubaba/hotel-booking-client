@@ -6,6 +6,10 @@ import { AuthContext } from "../authProvider/AuthProvider";
 import { MdBedroomParent } from "react-icons/md";
 import logo from '../assets/icons8-booking-48.png'
 import logo2 from '../assets/icons8-contact-us-24.png'
+import { CgCalendarDates } from "react-icons/cg";
+import { MdContactMail } from "react-icons/md";
+import { IoBedOutline } from "react-icons/io5";
+import { MdOutlineMapsHomeWork } from "react-icons/md";
 
 
 
@@ -15,33 +19,35 @@ const Navbar = () => {
         user ? (<>
 
             <div className="flex gap-2">
-                <button className="text-2xl"><BiSolidHomeHeart /></button>
+                <button className="text-2xl"><MdOutlineMapsHomeWork/></button>
 
 
                 <NavLink to='/' className={({ isActive }) => isActive ? ' text-[#158260]  text-xl font-bold' : 'font-bold text-xl px-2'}>Home</NavLink>
             </div>
             <div className="flex gap-2">
-                <button className="text-2xl"><MdBedroomParent /></button>
+                <button className="text-2xl"><IoBedOutline/></button>
 
                 <NavLink to='/rooms' className={({ isActive }) => isActive ? '  text-[#158260]  px-3 text-xl font-bold' : 'font-bold text-xl'}>Rooms</NavLink>
             </div>
             <div className="flex gap-2">
               
-                <img  className="w-6 text-2xl ml-2 bg-white text-white" src={logo} alt="" />
+                {/* <img  className="w-6 text-2xl ml-2 bg-white text-white" src={logo} alt="" /> */}
+                <button className="text-2xl"><CgCalendarDates /></button>
+              
                 <NavLink to='/my-booking' className={({ isActive }) => isActive ? ' text-[#158260]  px-3 text-xl font-bold' : 'font-bold text-xl'}>My Bookings</NavLink>
             </div>
 
-            <div className="flex gap-2 ">
-                <img className="text-2xl ml-2 bg-white" src={logo2} alt="" />
+            {/* <div className="flex gap-2 ">
+            <button className="text-2xl"><MdContactMail /></button>
                 <NavLink to='/contact-us' className={({ isActive }) => isActive ? '  text-[#158260]   px-3 text-xl font-bold' : 'font-bold text-xl'}>Contact Us</NavLink>
 
-            </div>
+            </div> */}
         </>) :
         (
 
             <div className="lg:flex gap-5">
                 <NavLink to='/' className="flex items-center space-x-2" activeClassName="border bg-[#411b18] text-white px-3 text-xl font-bold">
-                    <button className="text-2xl"><BiSolidHomeHeart /></button>
+                    <button className="text-2xl"><MdOutlineMapsHomeWork/></button>
                     <span className="font-bold text-xl text-[#158260] ">Home</span>
                 </NavLink>
                 <Link to='/signin'>
