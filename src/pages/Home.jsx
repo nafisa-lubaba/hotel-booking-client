@@ -4,7 +4,8 @@ import Slider from '../components/Slider';
 import Cards from '../components/Cards';
 import Maps from '../components/Maps';
 import Newsletter from '../components/Newsletter';
-import Reviews from '../components/Reviews';
+import Testimonial from '../components/Testimonial'
+
 
 
 const Home = () => {
@@ -17,7 +18,8 @@ const Home = () => {
             <Cards></Cards>
             <Maps></Maps>
             <Newsletter></Newsletter>
-            <Reviews></Reviews>
+            <Testimonial></Testimonial>
+           
               <ToastContainer/>
             
         </div>

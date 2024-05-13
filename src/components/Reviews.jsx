@@ -1,6 +1,13 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from 'swiper/react';
 
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import Slide from './Slide';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 const Reviews = () => {
 

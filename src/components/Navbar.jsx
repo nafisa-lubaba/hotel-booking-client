@@ -32,7 +32,7 @@ const Navbar = () => {
             <div className="flex gap-2">
               
                 {/* <img  className="w-6 text-2xl ml-2 bg-white text-white" src={logo} alt="" /> */}
-                <button className="text-2xl"><CgCalendarDates /></button>
+                <button className="text-2xl "><CgCalendarDates /></button>
               
                 <NavLink to='/my-booking' className={({ isActive }) => isActive ? ' text-[#158260]  px-3 text-xl font-bold' : 'font-bold text-xl'}>My Bookings</NavLink>
             </div>

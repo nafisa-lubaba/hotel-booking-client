@@ -24,7 +24,7 @@ const Registration = () => {
 		formState: { errors },
 	} = useForm()
 	const onSubmit = async (data) => {
-		const { email, password } = data
+		const { email, password, name } = data
 		if (password.length < 6) {
 			toast('Password should be 6 character or more')
 		}
@@ -61,7 +61,7 @@ const Registration = () => {
 		// 	})
 		// }
     try {
-      const result = await createUser(email, password);
+      const result = await createUser(email, password, name);
       console.log(result.user);
       const { data } = await axios.post(
           `${import.meta.env.VITE_API_URL}/jwt`,

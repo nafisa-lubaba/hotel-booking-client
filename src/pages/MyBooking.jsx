@@ -32,8 +32,8 @@
 //               confirmButtonText: 'Cool'
 //             })
 //           }
-    
-    
+
+
 //         } catch (err) {
 //           console.log(err);
 //         }
@@ -44,7 +44,7 @@
 //         const comment_text = form.comment_text.value;
 //         const rating = form.rating.value;
 //         const timestamp = new Date().toISOString();
-    
+
 //         // const roomTitel = items.title;
 //         const reviewData = {
 //           comment_text, rating, timestamp: timestamp, name, email, image, room_title: selectedRoomTitle,
@@ -131,7 +131,7 @@
 //                         </tbody>
 //                     </table>
 //                 </div>
-                
+
 
 //             </div>
 //             <div className="bg-orange-100">
@@ -224,9 +224,9 @@
 //           </div>
 //         </div>
 //       )}
-            
+
 //         </div>
-        
+
 //     );
 // };
 
@@ -293,7 +293,7 @@ const MyBooking = () => {
 
     // const roomTitel = items.title;
     const reviewData = {
-      comment_text, rating, timestamp: timestamp, name, email, image, room_title: selectedRoomTitle,
+      comment_text, rating, timestamp: timestamp, name, email, image, title: selectedRoomTitle,
     }
     console.log(reviewData);
     try {
@@ -312,7 +312,7 @@ const MyBooking = () => {
     }
   }
   return (
-   
+
     <div className="">
       <h1 className="text-3xl text-center text-[#2ccb99] py-5">My booking room</h1>
       <div className="overflow-x-auto">

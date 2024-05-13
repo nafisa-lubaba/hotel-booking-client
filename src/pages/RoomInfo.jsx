@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../authProvider/AuthProvider";
 import Swal from "sweetalert2";
@@ -9,18 +9,19 @@ const RoomInfo = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [bookingFrom, setBookingFrom] = useState('')
     const [bookingTo, setBookingTo] = useState('')
+    const [review, setReview] = useState([]);
     const { user } = useContext(AuthContext)
 
     const data = useLoaderData();
     console.log(data);
 
     // Assuming data is an object with properties like _id, title, image, and room_description
-    const { _id, title, banner_image, room_description, room_images, price_per_night, room_size, availability, special_offers,max_guests, beds } = data;
+    const { _id, title, banner_image, room_description, room_images, price_per_night, room_size, availability, special_offers, max_guests, beds } = data;
     const email = user?.email;
     const name = user?.displayName;
     const photourl = user?.photoURL;
     console.log(user)
-    const handleBookNowClick = async e => {
+    const handleClick = async e => {
         const bookingData = {
             bookingFrom,
             bookingTo,
@@ -44,13 +45,24 @@ const RoomInfo = () => {
         } catch (err) {
             console.log(err);
         }
+       
     }
-    
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         try {
+    //             const { data } = await axios(`${import.meta.env.VITE_API_URL}/review`);
+    //             setReview(data);
+    //         } catch (error) {
+    //             console.error('Error fetching data:', error);
+    //         }
+    //     };
+    //     fetchData();
+    // }, []);
+    // console.log(review[0].room_title , title)
+    // const reviews = review.find(rew => rew.room_title === title)
+    // console.log(reviews)
 
 
-    // If data is an object with a nested property 'room' containing the desired information
-    // const { room } = data;
-    // const { _id, title, image, room_description } = room;
 
     return (
 
@@ -64,14 +76,14 @@ const RoomInfo = () => {
 
                         {/* <a href="#" className="block mt-2 text-xl font-semibold text-gray-800 transition-colors duration-300 transform dark:text-white hover:text-gray-600 hover:underline" tabIndex="0" role="link">{room_description}</a> */}
                         <p className="mt-2 text-xl dark:text-gray-400"><span className="text-[#158260] font-bold">Description of the Room:</span>
-                        <span className="text-[#2ccb99] pl-2 text-xl">{room_description}</span>
-                            </p>
+                            <span className="text-[#2ccb99] pl-2 text-xl">{room_description}</span>
+                        </p>
                     </div>
 
                     <div className="mt-4">
                         <div className="flex justify-between">
                             <div className="flex items-center">
-                                <button className="text-xl mr-2"><RiMoneyDollarCircleLine /></button>
+                               
                                 <h2 className=" text-xl font-bold text-[#2ccb99]">Price: <span className="text-[#158260] pl-2">${price_per_night}</span></h2>
 
                                 <a href="#" className="mx-2 ml-3 font-semibold text-xl text-[#2ccb99]" tabIndex="0" role="link">Room Size: <span className="text-[#158260] pl-2">{room_size}</span></a>
@@ -101,7 +113,7 @@ const RoomInfo = () => {
                     </div>
                 </section>
                 <div className="relative flex justify-center">
-                <div className="p-5">
+                    <div className="p-5">
                         <button onClick={() => {
                             if (availability === 'unAvailable') {
                                 // Show alert
@@ -122,23 +134,23 @@ const RoomInfo = () => {
                         <div className="fixed inset-0 z-10 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
                             <div className="flex items-end justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
                                 <span className="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
-                                
+
 
                                 <div className="relative inline-block px-4 pt-5 pb-4 overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl rtl:text-right dark:bg-gray-900 sm:my-8 sm:align-middle sm:max-w-sm sm:w-full sm:p-6">
                                     <div>
                                         <h2 className="text-[#2ccb99]">{title}</h2>
                                     </div>
                                     <div>
-                                    <div  className="flex flex-col">
-                       <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">Maximum number of guest:
-                           <span className="text-[#2ccb99]"> {max_guests}</span></p>
-                           <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">Numer of bed:
-                           <span className="text-[#2ccb99]"> {beds}</span></p>
-                       </div>
+                                        <div className="flex flex-col">
+                                            <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">Maximum number of guest:
+                                                <span className="text-[#2ccb99]"> {max_guests}</span></p>
+                                            <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">Numer of bed:
+                                                <span className="text-[#2ccb99]"> {beds}</span></p>
+                                        </div>
                                         <div className="flex items-center justify-between">
                                             <div className='flex flex-col '>
-                                        
-                      
+
+
                                                 <label className='text-black'>From</label>
                                                 <input className="text-black"
                                                     type="date"
@@ -171,14 +183,14 @@ const RoomInfo = () => {
                                     </div>
 
                                     <div className="mt-5 sm:flex sm:items-center sm:justify-between">
-                                       
+
 
                                         <div className="sm:flex sm:items-center ">
-                                            <button onClick={handleBookNowClick}className="w-full px-4 py-2 mt-2 text-sm font-medium bg-[#158260] tracking-wide text-white capitalize transition-colors duration-300 transform border border-gray-200 rounded-md sm:mt-0 sm:w-auto sm:mx-2 dark:text-gray-200 dark:border-gray-700 dark:hover:bg-gray-800 hover:bg-gray-100 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-40">
+                                            <button onClick={handleClick} className="w-full px-4 py-2 mt-2 text-sm font-medium bg-[#158260] tracking-wide text-white capitalize transition-colors duration-300 transform border border-gray-200 rounded-md sm:mt-0 sm:w-auto sm:mx-2 dark:text-gray-200 dark:border-gray-700 dark:hover:bg-gray-800 hover:bg-gray-100 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-40">
                                                 Book Now
-                                                
+
                                             </button>
-                                            
+
                                             <button onClick={() => setIsOpen(false)} className="w-full px-4 py-2 mt-2 text-sm font-medium bg-[#158260] tracking-wide text-white capitalize transition-colors duration-300 transform border border-gray-200 rounded-md sm:mt-0 sm:w-auto sm:mx-2 dark:text-gray-200 dark:border-gray-700 dark:hover:bg-gray-800 hover:bg-gray-100 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-40">
                                                 Cancel
                                             </button>

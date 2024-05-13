@@ -4,7 +4,7 @@ const Newsletter = () => {
     return (
         <div>
             <header className=" dark:bg-gray-900 mt-5 mb-5 rounded-2xl border  border-dashed border-gray-400 card-body bg-gradient-to-r from-indigo-100 from-10% via-sky-100 via-30% to-emerald-300 to-90% ...">
-               
+
                 <div className="container px-6 py-16 mx-auto">
                     <div className="items-center lg:flex">
                         <div className="w-full lg:w-1/2">
