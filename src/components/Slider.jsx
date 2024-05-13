@@ -24,14 +24,15 @@ const Slider = () => {
         keyboard={true}
         cssMode={true}
     >
-        <SwiperSlide className="relative mx-auto w-[90%]">
+        <SwiperSlide className="relative ">
             <div>
                 <img className="w-full " src="https://i.ibb.co/HrCGtmB/banner1-1.png" />
             </div>
             <div className="absolute inset-0 flex flex-col text-center items-center justify-center bg-black bg-opacity-40 rounded-lg">
-                <h2 className="text-2xl lg:text-5xl pb-10 font-bold">j</h2>
+                <h2 className="text-2xl lg:text-5xl pb-10 font-bold">Welcome to AstraStay</h2>
                 <div className="flex w-[350px] lg:w-[650px] text-center">
                     <p className="sm:block hidden lg:text-xl text-white font-bold"></p>
+                    <button className='btn btn-primary'></button>
                     
                 </div>
                

@@ -6,7 +6,7 @@ import { AuthContext } from "../authProvider/AuthProvider";
 import { MdBedroomParent } from "react-icons/md";
 import logo from '../assets/icons8-booking-48.png'
 import logo2 from '../assets/icons8-contact-us-24.png'
-import logo3 from '../assets/AstraStay.png'
+
 
 
 const Navbar = () => {
@@ -18,22 +18,22 @@ const Navbar = () => {
                 <button className="text-2xl"><BiSolidHomeHeart /></button>
 
 
-                <NavLink to='/' className={({ isActive }) => isActive ? 'border text-white  text-xl font-bold' : 'font-bold text-xl px-2'}>Home</NavLink>
+                <NavLink to='/' className={({ isActive }) => isActive ? ' text-[#158260]  text-xl font-bold' : 'font-bold text-xl px-2'}>Home</NavLink>
             </div>
             <div className="flex gap-2">
                 <button className="text-2xl"><MdBedroomParent /></button>
 
-                <NavLink to='/rooms' className={({ isActive }) => isActive ? 'border  text-white px-3 text-xl font-bold' : 'font-bold text-xl'}>Rooms</NavLink>
+                <NavLink to='/rooms' className={({ isActive }) => isActive ? '  text-[#158260]  px-3 text-xl font-bold' : 'font-bold text-xl'}>Rooms</NavLink>
             </div>
             <div className="flex gap-2">
               
                 <img  className="w-6 text-2xl ml-2 bg-white text-white" src={logo} alt="" />
-                <NavLink to='/my-booking' className={({ isActive }) => isActive ? 'border  text-white px-3 text-xl font-bold' : 'font-bold text-xl'}>My Bookings</NavLink>
+                <NavLink to='/my-booking' className={({ isActive }) => isActive ? ' text-[#158260]  px-3 text-xl font-bold' : 'font-bold text-xl'}>My Bookings</NavLink>
             </div>
 
             <div className="flex gap-2 ">
                 <img className="text-2xl ml-2 bg-white" src={logo2} alt="" />
-                <NavLink to='/contact-us' className={({ isActive }) => isActive ? 'border  text-white  px-3 text-xl font-bold' : 'font-bold text-xl'}>Contact Us</NavLink>
+                <NavLink to='/contact-us' className={({ isActive }) => isActive ? '  text-[#158260]   px-3 text-xl font-bold' : 'font-bold text-xl'}>Contact Us</NavLink>
 
             </div>
         </>) :
@@ -41,14 +41,14 @@ const Navbar = () => {
 
             <div className="lg:flex gap-5">
                 <NavLink to='/' className="flex items-center space-x-2" activeClassName="border bg-[#411b18] text-white px-3 text-xl font-bold">
-                    <button className="text-2xl text-[#682018]"><BiSolidHomeHeart /></button>
-                    <span className="font-bold text-xl">Home</span>
+                    <button className="text-2xl"><BiSolidHomeHeart /></button>
+                    <span className="font-bold text-xl text-[#158260] ">Home</span>
                 </NavLink>
                 <Link to='/signin'>
-                    <button className="btn bg-[#411b18] text-white w-full ">SignIn</button>
+                    <button className="btn  bg-[#158260] text-white  w-full ">SignIn</button>
                 </Link>
                 <Link to='/signup'>
-                    <button className="btn bg-[#411b18] text-white w-full">Registration</button>
+                    <button className="btn bg-[#158260] text-white w-full">Registration</button>
                 </Link>
 
 
@@ -74,8 +74,9 @@ const Navbar = () => {
 
                     </ul>
                 </div>
+                
 
-                <a className="text-xl w-20 bg-green"><img src=''alt="" /></a>
+                <a className="text-xl w-20 bg-green"><img src=''alt="" />AstraStay</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 

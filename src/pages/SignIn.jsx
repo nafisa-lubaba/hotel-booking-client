@@ -98,7 +98,7 @@ const SignIn = () => {
         <div className='flex justify-center items-center min-h-[calc(100vh-306px)]'>
             <div className='flex w-full max-w-sm mx-auto overflow-hidden bg-white rounded-lg shadow-lg lg:max-w-4xl '>
                 <div className='hidden bg-cover bg-center lg:block lg:w-1/2'>
-                    <img src="https://i.ibb.co/BL947D0/regpage.png" alt="" />
+                    <img className="w-full h-full" src="https://i.ibb.co/rxmLngN/login.jpg" alt="" />
                 </div>
 
                 <div className='w-full px-6 py-8 md:px-8 lg:w-1/2'>
@@ -183,7 +183,7 @@ const SignIn = () => {
                     <div className='flex items-center justify-between mt-4'>
                         <span className='w-1/5 border-b  md:w-1/4'></span>
                         <Link
-                            to='/registration'
+                            to='/signup'
                             className='text-xs text-gray-500 uppercase hover:underline'
                         >
                             or sign up
