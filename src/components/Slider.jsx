@@ -26,7 +26,7 @@ const Slider = () => {
     >
         <SwiperSlide className="relative">
             <div>
-                <img className="w-full rounded-lg" src="https://i.ibb.co/SnmH1S3/slide1.png" />
+                <img className="w-full rounded-lg" src="https://i.ibb.co/HrCGtmB/banner1-1.png" />
             </div>
             <div className="absolute inset-0 flex flex-col justify-center items-center text-center bg-black bg-opacity-40 rounded-lg">
                 <h2 className="text-2xl lg:text-5xl text-white  pb-5 font-bold">Visit Tajikistan With JourneyGenie</h2>
@@ -40,7 +40,7 @@ const Slider = () => {
         </SwiperSlide>
         <SwiperSlide className="relative">
             <div>
-                <img className="w-full rounded-lg" src="https://i.ibb.co/CzqpdjK/slide2.png" />
+                <img className="w-full rounded-lg" src="https://i.ibb.co/nCdnpx3/banner-3-2.png" />
             </div>
             <div className="absolute inset-0 flex flex-col justify-center items-center text-center bg-black bg-opacity-40 rounded-lg">
                 <h2 className="text-2xl lg:text-5xl text-white pb-5 font-bold">Visit Turkmenistan With JourneyGenie</h2>
@@ -51,7 +51,7 @@ const Slider = () => {
         </SwiperSlide>
         <SwiperSlide className="relative">
             <div>
-                <img className="w-full rounded-lg" src="https://i.ibb.co/kDf90sK/slider3.png" />
+                <img className="w-full rounded-lg" src="https://i.ibb.co/1mnPNZS/banner-4.png" />
             </div>
             <div className="absolute inset-0 flex flex-col justify-center items-center text-center bg-black bg-opacity-40 rounded-lg">
                 <h2 className="text-2xl lg:text-5xl text-white pb-5 font-bold">Visit Kazakhstan With JourneyGenie </h2>
@@ -62,7 +62,7 @@ const Slider = () => {
         </SwiperSlide>
         <SwiperSlide className="relative">
             <div>
-                <img className="w-full rounded-lg" src="https://i.ibb.co/JyGXQCr/slider4.png" />
+                <img className="w-full rounded-lg" src="https://i.ibb.co/1ZFrH1k/banner-5.png" />
             </div>
             <div className="absolute inset-0 flex flex-col justify-center items-center text-center bg-black bg-opacity-40 rounded-lg">
                 <h2 className="text-2xl lg:text-5xl text-white pb-5 font-bold">Visit Mongolia With JourneyGenie </h2>

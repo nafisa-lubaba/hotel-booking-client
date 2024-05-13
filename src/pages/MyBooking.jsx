@@ -314,7 +314,7 @@ const MyBooking = () => {
   return (
    
     <div className="">
-      <h1 className="text-3xl text-center text-white py-5">My booking room</h1>
+      <h1 className="text-3xl text-center text-[#2ccb99] py-5">My booking room</h1>
       <div className="overflow-x-auto">
         <table className="table w-full mx-auto">
           <thead>
@@ -338,17 +338,17 @@ const MyBooking = () => {
                 <td className="w-full md:w-auto">{list.beds}</td>
                 <td className="w-full md:w-auto text-center">{list.bookingFrom} <br /> to <br /> {list.bookingTo}</td>
                 <td>
-                  <button onClick={() => { setIsOpen(true); setSelectedRoomTitle(list.title); }} className="btn btn-outline border border-[#a86a60] hover:bg-[#a86a60] hover:outline-none hover:text-white text-[#a86a60]">
+                  <button onClick={() => { setIsOpen(true); setSelectedRoomTitle(list.title); }} className="btn btn-outline border border-[#2ccb99]  bg-[#2ccb99] text-white px-6 py-2 mx-auto tracking-wide capitalize transition-colors duration-300 transform  rounded-md hover:bg-white hover:text-black ">
                     Review
                   </button>
                 </td>
                 <td>
-                  <button className="btn btn-outline border border-[#a86a60] hover:bg-[#a86a60] hover:outline-none hover:text-white text-[#a86a60]">
+                  <button className="btn btn-outline border border-[#2ccb99]  bg-[#2ccb99] text-white px-6 py-2 mx-auto tracking-wide capitalize transition-colors duration-300 transform  rounded-md hover:bg-white hover:text-black">
                     Update Now
                   </button>
                 </td>
                 <td>
-                  <button onClick={() => handleCancelNow(list._id)} className="btn btn-outline border border-[#a86a60] hover:bg-[#a86a60] hover:outline-none hover:text-white text-[#a86a60]">
+                  <button onClick={() => handleCancelNow(list._id)} className="btn btn-outline border border-[#2ccb99]  bg-[#2ccb99] text-white px-6 py-2 mx-auto tracking-wide capitalize transition-colors duration-300 transform  rounded-md hover:bg-white hover:text-black">
                     Cancel
                   </button>
                 </td>

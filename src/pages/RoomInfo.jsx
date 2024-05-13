@@ -17,6 +17,7 @@ const RoomInfo = () => {
     const { _id, title, banner_image, room_description, room_images, price_per_night, room_size, availability, special_offers,max_guests, beds } = data;
     const email = user?.email;
     const name = user?.displayName;
+    const photourl = user?.photoURL;
     console.log(user)
     const handleBookNowClick = async e => {
         const bookingData = {
@@ -24,7 +25,8 @@ const RoomInfo = () => {
             bookingTo,
             availability: 'unAvailable',
             email,
-            name
+            name,
+            photourl
         }
         console.log(bookingData);
         try {
