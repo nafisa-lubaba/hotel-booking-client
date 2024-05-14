@@ -10,6 +10,7 @@ const RoomInfo = () => {
     const [bookingFrom, setBookingFrom] = useState('')
     const [bookingTo, setBookingTo] = useState('')
     const [review, setReview] = useState([]);
+    
     const { user } = useContext(AuthContext)
 
     const data = useLoaderData();
@@ -45,7 +46,7 @@ const RoomInfo = () => {
         } catch (err) {
             console.log(err);
         }
-       
+
     }
     // useEffect(() => {
     //     const fetchData = async () => {
@@ -61,8 +62,7 @@ const RoomInfo = () => {
     // console.log(review[0].room_title , title)
     // const reviews = review.find(rew => rew.room_title === title)
     // console.log(reviews)
-
-
+    
 
     return (
 
@@ -83,7 +83,7 @@ const RoomInfo = () => {
                     <div className="mt-4">
                         <div className="flex justify-between">
                             <div className="flex items-center">
-                               
+
                                 <h2 className=" text-xl font-bold text-[#2ccb99]">Price: <span className="text-[#158260] pl-2">${price_per_night}</span></h2>
 
                                 <a href="#" className="mx-2 ml-3 font-semibold text-xl text-[#2ccb99]" tabIndex="0" role="link">Room Size: <span className="text-[#158260] pl-2">{room_size}</span></a>
@@ -205,6 +205,25 @@ const RoomInfo = () => {
                 </div>
 
             </div>
+            {/* Reviews section */}
+            {/* <div className="max-w-2xl overflow-hidden rounded-lg shadow-md dark:bg-gray-800">
+                <h2 className="text-xl font-semibold text-[#158260]">Reviews for {title}</h2>
+                {reviews.length === 0 ? (
+                    <p>No reviews available for this room.</p>
+                ) : (
+                    <ul>
+                        {reviews.map((review, index) => (
+                            <li key={index}>
+                                <p>Rating: {review.rating}</p>
+                                <p>{review.comment}</p>
+                                <p>By: {review.user}</p>
+                            </li>
+                        ))}
+                    </ul>
+                )}
+            </div> */}
+          
+
 
 
         </div>

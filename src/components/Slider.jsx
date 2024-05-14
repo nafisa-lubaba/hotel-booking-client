@@ -37,8 +37,8 @@ const Slider = () => {
                    
                     
                 </div>
-                <Link to='/rooms' className="w-full px-4 py-2  text-sm font-medium bg-[#158260] tracking-wide text-white capitalize transition-colors duration-300 transform border border-gray-200 rounded-md sm:mt-0 sm:w-auto sm:mx-2 dark:text-gray-200 dark:border-gray-700 flex justify-center items-center dark:hover:bg-gray-800 hover:bg-gray-100 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-40">
-                                             Explore All Rooms
+                <Link to='/rooms' className="w-full px-4 py-2  font-medium bt glass tracking-wide text-white capitalize transition-colors duration-300 transform border border-gray-800  rounded-md sm:mt-0 sm:w-auto sm:mx-2 dark:text-gray-200 dark:border-gray-700 flex justify-center items-center dark:hover:bg-gray-800 hover:bg-gray-100 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-40">
+                                             Explore All Rooms ->
                                             </Link>
               
                
@@ -53,10 +53,10 @@ const Slider = () => {
             <div className="absolute inset-0 flex flex-col justify-center items-center text-center bg-black bg-opacity-60 rounded-lg">
             <h2 className="text-2xl lg:text-5xl pb-5 font-bold">Celestial hospitality awaits:  <span className='text-white'> AstraStay</span></h2>
                 <div className="flex w-[350px] lg:w-[650px] text-center">
-                    <p className="sm:block hidden lg:text-xl mb-4 text-white font-bold">Discover unparalleled comfort and seamless booking experiences, redefining hospitality with every stay</p>
+                    <p className="sm:block hidden lg:text-xl mb-4 text-white font-bold">Discover unparalleled comfort and seamless booking experiences, redefining hospitality with every stay.</p>
                 </div>
-                <Link to='/rooms' className="w-full px-4 py-2  text-sm font-medium bg-[#158260] tracking-wide text-white capitalize transition-colors duration-300 transform border border-gray-200 rounded-md sm:mt-0 sm:w-auto sm:mx-2 dark:text-gray-200 dark:border-gray-700 flex justify-center items-center dark:hover:bg-gray-800 hover:bg-gray-100 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-40">
-                                             Explore All Rooms
+                <Link to='/rooms' className="w-full px-4 py-2  font-medium bt glass tracking-wide text-white capitalize transition-colors duration-300 transform border border-gray-800  rounded-md sm:mt-0 sm:w-auto sm:mx-2 dark:text-gray-200 dark:border-gray-700 flex justify-center items-center dark:hover:bg-gray-800 hover:bg-gray-100 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-40">
+                                             Explore All Rooms ->
                                             </Link>
             </div>
         </SwiperSlide>
@@ -68,10 +68,10 @@ const Slider = () => {
             <h2 className="text-2xl lg:text-5xl pb-5 font-bold">Celestial hospitality awaits:  <span className='text-white'> AstraStay</span></h2>
               
                 <div className="flex w-[350px] lg:w-[650px] text-center">
-                    <p className="sm:block hidden lg:text-xl mb-4 text-white font-bold">Discover unparalleled comfort and seamless booking experiences, redefining hospitality with every stay</p>
+                    <p className="sm:block hidden lg:text-xl mb-4 text-white font-bold">Discover unparalleled comfort and seamless booking experiences, redefining hospitality with every stay.</p>
                 </div>
-                <Link to='/rooms' className="w-full px-4 py-2  text-sm font-medium bg-[#158260] tracking-wide text-white capitalize transition-colors duration-300 transform border border-gray-200 rounded-md sm:mt-0 sm:w-auto sm:mx-2 dark:text-gray-200 dark:border-gray-700 flex justify-center items-center dark:hover:bg-gray-800 hover:bg-gray-100 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-40">
-                                             Explore All Rooms
+                <Link to='/rooms' className="w-full px-4 py-2  font-medium bt glass tracking-wide text-white capitalize transition-colors duration-300 transform border border-gray-800  rounded-md sm:mt-0 sm:w-auto sm:mx-2 dark:text-gray-200 dark:border-gray-700 flex justify-center items-center dark:hover:bg-gray-800 hover:bg-gray-100 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-40">
+                                             Explore All Rooms ->
                                             </Link>
             </div>
         </SwiperSlide>
@@ -82,10 +82,10 @@ const Slider = () => {
             <div className="absolute inset-0 flex flex-col justify-center items-center text-center bg-black bg-opacity-60 rounded-lg">
             <h2 className="text-2xl lg:text-5xl pb-5 font-bold">Celestial hospitality awaits:  <span className='text-white'> AstraStay</span></h2>
                 <div className="flex w-[350px] lg:w-[650px] text-center">
-                    <p className="sm:block hidden lg:text-xl mb-4 text-white font-bold">Discover unparalleled comfort and seamless booking experiences, redefining hospitality with every stay</p>
+                    <p className="sm:block hidden lg:text-xl mb-4 text-white font-bold">Discover unparalleled comfort and seamless booking experiences, redefining hospitality with every stay.</p>
                 </div>
-                <Link to ='/rooms' className="w-full px-4 py-2  text-sm font-medium bg-[#158260] tracking-wide text-white capitalize transition-colors duration-300 transform border border-gray-200 rounded-md sm:mt-0 sm:w-auto sm:mx-2 dark:text-gray-200 dark:border-gray-700 flex justify-center items-center dark:hover:bg-gray-800 hover:bg-gray-100 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-40">
-                                             Explore All Rooms
+                <Link to='/rooms' className="w-full px-4 py-2  font-medium bt glass tracking-wide text-white capitalize transition-colors duration-300 transform border border-gray-800  rounded-md sm:mt-0 sm:w-auto sm:mx-2 dark:text-gray-200 dark:border-gray-700 flex justify-center items-center dark:hover:bg-gray-800 hover:bg-gray-100 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-40">
+                                             Explore All Rooms ->
                                             </Link>
             </div>
         </SwiperSlide>
@@ -96,10 +96,10 @@ const Slider = () => {
             <div className="absolute inset-0 flex flex-col justify-center items-center text-center bg-black bg-opacity-60 rounded-lg">
             <h2 className="text-2xl lg:text-5xl pb-5 font-bold">Celestial hospitality awaits:  <span className='text-white'> AstraStay</span></h2>
                 <div className="flex w-[350px] lg:w-[650px] text-center">
-                    <p className="sm:block hidden lg:text-xl mb-4 text-white font-bold">Discover unparalleled comfort and seamless booking experiences, redefining hospitality with every stay</p>
+                    <p className="sm:block hidden lg:text-xl mb-4 text-white font-bold">Discover unparalleled comfort and seamless booking experiences, redefining hospitality with every stay.</p>
                 </div>
-                <Link to ='/rooms' className="w-full px-4 py-2  text-sm font-medium bg-[#158260] tracking-wide text-white capitalize transition-colors duration-300 transform border border-gray-200 rounded-md sm:mt-0 sm:w-auto sm:mx-2 dark:text-gray-200 dark:border-gray-700 flex justify-center items-center dark:hover:bg-gray-800 hover:bg-gray-100 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-40">
-                                             Explore All Rooms
+                <Link to='/rooms' className="w-full px-4 py-2  font-medium bt glass tracking-wide text-white capitalize transition-colors duration-300 transform border border-gray-800  rounded-md sm:mt-0 sm:w-auto sm:mx-2 dark:text-gray-200 dark:border-gray-700 flex justify-center items-center dark:hover:bg-gray-800 hover:bg-gray-100 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-40">
+                                             Explore All Rooms ->
                                             </Link>
             </div>
         </SwiperSlide>

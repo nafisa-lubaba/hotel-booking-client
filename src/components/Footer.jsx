@@ -6,7 +6,7 @@ const Footer = () => {
                     <div className="w-full -mx-6 lg:w-2/5">
                         <div className="px-6">
                       <div className="flex gap-3">
-                      <img className="w-9" src="https://i.ibb.co/T4rT9gN/images.jpg" alt="" />
+                      <img className="w-8" src="https://i.ibb.co/jVhVbnC/image.png" alt="" />
                            <h2 className="text-xl font-extrabold">AstraStay</h2>
                       </div>
                             <p className="max-w-sm mt-2 dark:text-gray-400">Join 31,000+ other and never miss out on new tips, tutorials, and more.</p>
