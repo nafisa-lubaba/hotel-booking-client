@@ -5,7 +5,10 @@ const Footer = () => {
                 <div className="lg:flex">
                     <div className="w-full -mx-6 lg:w-2/5">
                         <div className="px-6">
+                      <div className="flex gap-3">
+                      <img className="w-9" src="https://i.ibb.co/T4rT9gN/images.jpg" alt="" />
                            <h2 className="text-xl font-extrabold">AstraStay</h2>
+                      </div>
                             <p className="max-w-sm mt-2 dark:text-gray-400">Join 31,000+ other and never miss out on new tips, tutorials, and more.</p>
                             <div className="flex mt-6 -mx-2">
                                 <a href="#" className="mx-2 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400" aria-label="Reddit">

@@ -31,6 +31,7 @@ export default function Carousel() {
         fetchData();
     }, []);
     console.log(review);
+    
     return (
         <div className='container px-6 py-10 mx-auto'>
             <Swiper
@@ -57,6 +58,7 @@ export default function Carousel() {
                             image={reviews?.image}
                             name={reviews?.name}
                             comment_text={reviews?.comment_text}
+                            rating={reviews?.rating}
                             text3='Best Hotel Deals In Town'
                         />
                     </SwiperSlide>))

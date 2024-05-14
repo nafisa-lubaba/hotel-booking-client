@@ -82,7 +82,10 @@ const Navbar = () => {
                 </div>
                 
 
-                <a className="text-xl w-20 bg-green"><img src=''alt="" />AstraStay</a>
+               <div className="flex gap-2">
+                <img className="w-9" src="https://i.ibb.co/T4rT9gN/images.jpg" alt="" />
+               <a className="text-2xl w-20 font-bold bg-green"><img src=''alt="" />AstraStay</a>
+               </div>
             </div>
             <div className="navbar-center hidden lg:flex">
                 
