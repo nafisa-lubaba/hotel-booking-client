@@ -1,8 +1,14 @@
 
-
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 const Newsletter = () => {
+    useEffect(() => {
+        Aos.init();
+
+    }, [])
     return (
-        <div>
+        <div data-aos="zoom-in-down">
             <h1 className="text-4xl font-semibold mb-6 mt-6 flex justify-center items-center">Stay Updated: Join Our Newsletter</h1>
             <header className=" dark:bg-gray-900 mt-5 mb-5 rounded-2xl border  border-dashed border-gray-400 card-body bg-gradient-to-r from-indigo-100 from-10% via-sky-100 via-30% to-emerald-300 to-90% ...">
 

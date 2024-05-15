@@ -4,11 +4,13 @@ import 'swiper/css/navigation';
 import { Navigation, Pagination, Mousewheel, Keyboard, Autoplay} from 'swiper/modules';
 
 
+
 import 'swiper/css/autoplay'; 
 import { Link } from 'react-router-dom';
 
 
 const Slider = () => {
+   
     return (
         <Swiper
         slidesPerView={1}

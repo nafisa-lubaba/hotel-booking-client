@@ -1,6 +1,8 @@
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
+import Aos from "aos";
+import 'aos/dist/aos.css'
 
 // Import Swiper styles
 import 'swiper/css';
@@ -17,6 +19,10 @@ import axios from 'axios';
 
 
 export default function Carousel() {
+    useEffect(() => {
+        Aos.init();
+
+    }, [])
     const [review, setReview] = useState([]);
   
     useEffect(() => {
@@ -33,7 +39,7 @@ export default function Carousel() {
     console.log(review);
     
     return (
-        <div className='container px-6 py-10 mx-auto'>
+        <div className='container px-6 py-10 mx-auto' data-aos='fade-right'>
             <Swiper
              slidesPerView={1}
              onSlideChange={() => console.log('slide change')}

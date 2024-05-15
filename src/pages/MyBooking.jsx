@@ -313,7 +313,7 @@ const MyBooking = () => {
   };
 
   return (
-    <div className="">
+    <div className=" bg-gradient-to-r from-indigo-50 from-10% via-sky-50 via-30% to-emerald-100 to-90%">
       <h1 className="text-3xl text-center text-[#2ccb99] py-5">My booking room</h1>
       <div className="overflow-x-auto">
         <table className="table w-full mx-auto">

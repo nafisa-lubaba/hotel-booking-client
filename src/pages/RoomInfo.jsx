@@ -1,14 +1,20 @@
-import { useContext,  useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../authProvider/AuthProvider";
 import Swal from "sweetalert2";
 import axios from "axios";
+import Aos from "aos";
+import 'aos/dist/aos.css'
 
 
 const RoomInfo = () => {
+    useEffect(() => {
+        Aos.init();
+
+    }, [])
     const [isOpen, setIsOpen] = useState(false);
     const [bookingFrom, setBookingFrom] = useState('')
-   
+
     // const [review, setReview] = useState([]);
 
     const { user } = useContext(AuthContext)
@@ -78,12 +84,12 @@ const RoomInfo = () => {
 
     return (
 
-        <div className=' text-[#158260] flex flex-col md:flex-row justify-around gap-5  items-center min-h-[calc(100vh-306px)] md:max-w-screen-xl mx-auto'>
-            <div className="max-w-2xl overflow-hidden rounded-lg shadow-md dark:bg-gray-800">
-                <img className="object-cover w-full h-64" src={banner_image} alt="Room" />
+        <div className=' text-[#158260] flex flex-col md:flex-row justify-around gap-5  items-center min-h-[calc(100vh-306px)] md:max-w-screen-xl mx-auto  bg-gradient-to-r from-indigo-50 from-10% via-sky-50 via-30% to-emerald-100 to-90%'>
+            <div className="max-w-2xl overflow-hidden rounded-lg shadow-md dark:bg-gray-800  bg-gradient-to-r from-indigo-50 from-10% via-sky-50 via-30% to-emerald-100 to-90%">
+                <img className="object-cover w-full h-64" data-aos="fade-right" src={banner_image} alt="Room" />
 
-                <div className="p-6">
-                    <div>
+                <div className="p-6" data-aos="fade-left">
+                    <div >
                         <a href="#" className="block mt-2 text-xl font-semibold text-[#158260] duration-300 transform dark:text-white hover:text-gray-600 hover:underline" tabIndex="0" role="link">{title}</a>
 
                         {/* <a href="#" className="block mt-2 text-xl font-semibold text-gray-800 transition-colors duration-300 transform dark:text-white hover:text-gray-600 hover:underline" tabIndex="0" role="link">{room_description}</a> */}
@@ -103,14 +109,16 @@ const RoomInfo = () => {
                                 </a>
                             </div>
 
+
                         </div>
+                        <a href="#" className=" mt-3 font-semibold lg:text-xl   text-[#2ccb99]  dark:text-gray-200" tabIndex="0" role="link"> special_offers: <span className="font-bold pl-2 text-[#158260]">  {special_offers}</span>
+                        </a>
 
                     </div>
                 </div>
-                <a href="#" className=" pl-5 font-semibold lg:text-xl   text-[#2ccb99]  dark:text-gray-200" tabIndex="0" role="link"> special_offers: <span className="font-bold pl-2 text-[#158260]">  {special_offers}</span>
-                </a>
 
-                <section className="py-6 dark:bg-gray-100">
+
+                <section className="py-6 dark:bg-gray-100 " data-aos="fade-right">
                     <div className="container flex flex-col justify-center p-4 mx-auto">
                         <div className="grid grid-cols-1 gap-4 lg:grid-cols-4 sm:grid-cols-2">
                             {
@@ -173,7 +181,7 @@ const RoomInfo = () => {
                                                     onChange={(e) => setBookingFrom(e.target.value)}
                                                 />
                                             </div>
-                                            
+
                                         </div>
 
                                         <div className="mt-2 text-center">
