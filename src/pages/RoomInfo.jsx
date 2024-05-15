@@ -1,17 +1,18 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext,  useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../authProvider/AuthProvider";
 import Swal from "sweetalert2";
 import axios from "axios";
-import { RiMoneyDollarCircleLine } from "react-icons/ri";
+
 
 const RoomInfo = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [bookingFrom, setBookingFrom] = useState('')
-    const [bookingTo, setBookingTo] = useState('')
-    const [review, setReview] = useState([]);
-    
+   
+    // const [review, setReview] = useState([]);
+
     const { user } = useContext(AuthContext)
+    console.log(user)
 
     const data = useLoaderData();
     console.log(data);
@@ -22,18 +23,29 @@ const RoomInfo = () => {
     const name = user?.displayName;
     const photourl = user?.photoURL;
     console.log(user)
+
     const handleClick = async e => {
         const bookingData = {
             bookingFrom,
-            bookingTo,
             availability: 'unAvailable',
             email,
             name,
-            photourl
+            photourl,
+            bookingId: _id,
+            title,
+            banner_image,
+            room_description,
+            price_per_night,
+            room_size,
+            room_images,
+            special_offers,
+            max_guests,
+            beds,
+
         }
         console.log(bookingData);
         try {
-            const { data } = await axios.put(`${import.meta.env.VITE_API_URL}/rooms/${_id}`, bookingData)
+            const { data } = await axios.post(`http://localhost:5000/bookings`, bookingData)
             console.log(data)
             Swal.fire({
                 icon: 'success',
@@ -62,7 +74,7 @@ const RoomInfo = () => {
     // console.log(review[0].room_title , title)
     // const reviews = review.find(rew => rew.room_title === title)
     // console.log(reviews)
-    
+
 
     return (
 
@@ -161,17 +173,7 @@ const RoomInfo = () => {
                                                     onChange={(e) => setBookingFrom(e.target.value)}
                                                 />
                                             </div>
-                                            <div className='flex flex-col '>
-                                                <label className='text-black'>To</label>
-                                                <input className="text-black"
-                                                    type="date"
-                                                    name="bookingTo"
-                                                    id="bookingTo"
-                                                    value={bookingTo}
-                                                    required
-                                                    onChange={(e) => setBookingTo(e.target.value)}
-                                                />
-                                            </div>
+                                            
                                         </div>
 
                                         <div className="mt-2 text-center">
@@ -222,7 +224,7 @@ const RoomInfo = () => {
                     </ul>
                 )}
             </div> */}
-          
+
 
 
 
